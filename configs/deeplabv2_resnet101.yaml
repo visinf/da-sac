@@ -1,0 +1,22 @@
+DATASET:
+  CROP_SIZE: [640, 640]
+  VAL_CROP: True
+  RND_CROP: True
+  RND_JITTER: 0.5
+  SCALE_FROM: 0.5
+  SCALE_TO: 2.0
+  ROOT: "data"
+TRAIN:
+  BATCH_SIZE: 12
+  NUM_GROUPS: 8
+  GROUP_SIZE: 1
+  NUM_EPOCHS: 100
+  TASK: "train_game_9K"
+  TARGET: "train_cityscapes"
+MODEL:
+  ARCH: "deeplabv2_resnet101"
+  INIT_MODEL: "models/pretrained/resnet101-5d3b4d8f.pth"
+  LR: 0.00025
+  LR_TARGET: 0.
+  OPT: "SGD"
+  WEIGHT_DECAY: 0.0005

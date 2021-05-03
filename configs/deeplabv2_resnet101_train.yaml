@@ -1,0 +1,35 @@
+DATASET:
+  CROP_SIZE: [512, 1024]
+  VAL_CROP: False
+  RND_CROP: True
+  RND_JITTER: 0.4
+  RND_ZOOM: [.5, 1.]
+  GUIDED_HFLIP: True
+  RND_BLUR: True
+  RND_GREYSCALE: 0.2
+  SRC_RND_BLUR: False
+  SRC_RND_JITTER: 0.
+  SCALE_FROM: 0.5
+  SCALE_TO: 1.0
+  ROOT: "data"
+TRAIN:
+  BATCH_SIZE: 8
+  GROUP_SIZE: 4
+  NUM_GROUPS: 2
+  NUM_EPOCHS: 200
+  TASK: "train_game_9K"
+  TARGET: "train_cityscapes"
+MODEL:
+  ARCH: "deeplabv2_resnet101"
+  INIT_MODEL: "models/pretrained/resnet101-5d3b4d8f.pth"
+  LR: 0.00025
+  LR_TARGET: 5.
+  OPT: "SGD"
+  OPT_NESTEROV: False
+  WEIGHT_DECAY: 0.0005
+  RUN_CONF_UPPER: 0.75
+  RUN_CONF_LOWER: 0.2
+  NET_MOMENTUM: 0.99
+  NET_MOMENTUM_ITER: 100
+TB:
+  IM_SIZE: [256, 512]

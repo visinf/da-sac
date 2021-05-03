@@ -1,0 +1,23 @@
+DATASET:
+  CROP_SIZE: [640, 640]
+  RND_CROP: True
+  RND_JITTER: 0.4
+  SCALE_FROM: 0.5
+  SCALE_TO: 2.0
+  ROOT: "data"
+TRAIN:
+  BATCH_SIZE: 16
+  NUM_GROUPS: 2
+  GROUP_SIZE: 4
+  NUM_EPOCHS: 100
+  TASK: "train_game_9K"
+  TARGET: "train_cityscapes"
+MODEL:
+  ARCH: "deeplabv2_vgg16_bn"
+  INIT_MODEL: "models/pretrained/vgg16_bn-6c64b313.pth"
+  LR: 0.00025
+  LR_TARGET: 0.
+  OPT: "SGD"
+  WEIGHT_DECAY: 0.0005
+  RUN_CONF_UPPER: 0.9
+  NET_MOMENTUM: 0.999
