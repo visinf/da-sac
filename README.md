@@ -1,5 +1,4 @@
-# Self-supervised Augmentation Consistency for Adapting Semantic Segmentation
----
+# Self-supervised Augmentation Consistency <br/> for Adapting Semantic Segmentation
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
@@ -10,8 +9,8 @@ This repository contains the official implementation of our paper:
 To appear at CVPR 2021. [arXiv preprint]
 
 | <img src="assets/stuttgart.gif" alt="drawing" width="420"/><br> |
-|:---|
-| We obtain state-of-the-art accuracy of adapting semantic segmentation <br> by enforcing consistency across photometric and similarity <br> transformations  (no style transfer or adversarial training). |
+|:--:|
+| <p align="left">We obtain state-of-the-art accuracy of adapting semantic <br> segmentation by enforcing consistency across photometric <br> and similarity transformations. We use neither style transfer <br> nor adversarial training).</p> |
 
 
 Contact: Nikita Araslanov *fname.lname* (at) visinf.tu-darmstadt.de
@@ -19,7 +18,7 @@ Contact: Nikita Araslanov *fname.lname* (at) visinf.tu-darmstadt.de
 
 ---
 
-### Installation
+## Installation
 **Requirements.** To reproduce our results, we recommend Python >=3.6, PyTorch >=1.4, CUDA >=10.0. At least two Titan X GPUs (12Gb) or equivalent are required for VGG-16; ResNet-101 and VGG-16/FCN need four.
 
 1. create conda environment:
@@ -57,7 +56,7 @@ pip install -r requirements.txt
 Note that all ground-truth label IDs (Cityscapes, GTA5 and SYNTHIA) should be converted to Cityscapes [train IDs](assets/train_IDs.md).
 The label directories in the above example (```gtFine2```, ```labels_cs```) therefore refer not to the original labels, but to these converted semantic maps.
 
-# Training
+## Training
 Training from ImageNet initialisation proceeds in three steps:
 1. Training the baseline (ABN)
 2. Generating the weights for importance sampling
@@ -83,18 +82,18 @@ If you would like to skip this step, you can use our pre-trained models:
 
 **Source domain: GTA5**
 | Backbone | Arch. | IoU (val) | Link | MD5 |
-|---|---|---|---|---|
-| ResNet-101 | DeepLabv2 | 40.8 | [baseline_abn_e040.pth (336M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/baseline_abn_e040.pth) | `9fe17301faf87b03279257fb408c11fc` |
-| VGG-16 | DeepLabv2 | 37.1 | [baseline_abn_e115.pth (226M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/baseline_abn_e115.pth) | `d4ffcfb09775562108d1b6d32ddef755` |
-| VGG-16 | FCN | 36.7 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/baseline_abn_e040.pth) | `aa2e940894e2147e8ef1804fbc4bae53` |
+|---|---|:-:|---|---|
+| ResNet-101 | DeepLabv2 | 40.8 | [baseline_abn_e040.pth (336M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/baseline_abn_e040.pth) | `9fe17[...]c11fc` |
+| VGG-16 | DeepLabv2 | 37.1 | [baseline_abn_e115.pth (226M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/baseline_abn_e115.pth) | `d4ffc[...]ef755` |
+| VGG-16 | FCN | 36.7 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/baseline_abn_e040.pth) | `aa2e9[...]bae53` |
 
 
 **Source domain: SYNTHIA**
 | Backbone | Arch. | IoU (val) | Link | MD5 |
-|---|---|---|---|---|
-| ResNet-101 | DeepLabv2 | 36.3 | [baseline_abn_e090.pth (336M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/baseline_abn_e090.pth) | `b343113cd805bb7b5c7ca7f8104d1a83` |
-| VGG-16 | DeepLabv2 | 34.4 | [baseline_abn_e070.pth (226M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/baseline_abn_e070.pth) | `3af2456f236113ce6e074cae9c05b24e` |
-| VGG-16 | FCN | 31.6 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/baseline_abn_e040.pth) | `5f457311faaed83675b06ad1209e4b3a` |
+|---|---|:-:|---|---|
+| ResNet-101 | DeepLabv2 | 36.3 | [baseline_abn_e090.pth (336M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/baseline_abn_e090.pth) | `b3431[...]d1a83` |
+| VGG-16 | DeepLabv2 | 34.4 | [baseline_abn_e070.pth (226M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/baseline_abn_e070.pth) | `3af24[...]5b24e` |
+| VGG-16 | FCN | 31.6 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/baseline_abn_e040.pth) | `5f457[...]e4b3a` |
 
 **Tip:** You can download these files (as well as the final models below) with ```tools/download_baselines.sh```:
 ```bash
@@ -128,21 +127,21 @@ We provide our final models for download.
 
 **Source domain: GTA5**
 | Backbone | Arch. | IoU (val) |  IoU (test) | Link | MD5 |
-|---|---|---|---|---|---|
-| ResNet-101 | DeepLabv2 | 53.8 | 55.7 | [final_e136.pth (504M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/final_e136.pth) | `59c166645f3b36bd0482c4ff25b5a32f` |
-| VGG-16 | DeepLabv2 | 49.8 | 51.0 | [final_e184.pth (339M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/final_e184.pth) | `0accb8f76c001659dd3e6d5d2b6d5881` |
-| VGG-16 | FCN | 49.9 | 50.4 | [final_e112.pth (1.6G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/final_e112.pth) | `e69f8ba2c455f6c1c4a3d7e97a6f729b` |
+|---|---|:-:|:-:|---|---|
+| ResNet-101 | DeepLabv2 | 53.8 | 55.7 | [final_e136.pth (504M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/final_e136.pth) | `59c16[...]5a32f` |
+| VGG-16 | DeepLabv2 | 49.8 | 51.0 | [final_e184.pth (339M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/final_e184.pth) | `0accb[...]d5881` |
+| VGG-16 | FCN | 49.9 | 50.4 | [final_e112.pth (1.6G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/final_e112.pth) | `e69f8[...]f729b` |
 
 **Source domain: SYNTHIA**
 | Backbone | Arch. | IoU (val) |  IoU (test) | Link | MD5 |
-|---|---|---|---|---|---|
-| ResNet-101 | DeepLabv2 | 52.6 | 52.7 | [final_e164.pth (504M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/final_e164.pth) | `a76828ca805d1853bbcc98b7813db742` |
-| VGG-16 | DeepLabv2 | 49.1 | 48.3 | [final_e164.pth (339M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/final_e164.pth) | `c5b313772703790aaba24d071135fdb7` |
-| VGG-16 | FCN | 46.8 | 45.8 | [final_e098.pth (1.6G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/final_e098.pth) | `efb742e1304c8b628f5d1536988845cc` |
+|---|---|:-:|:-:|---|---|
+| ResNet-101 | DeepLabv2 | 52.6 | 52.7 | [final_e164.pth (504M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/final_e164.pth) | `a7682[...]db742` |
+| VGG-16 | DeepLabv2 | 49.1 | 48.3 | [final_e164.pth (339M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/final_e164.pth) | `c5b31[...]5fdb7` |
+| VGG-16 | FCN | 46.8 | 45.8 | [final_e098.pth (1.6G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/final_e098.pth) | `efb74[...]845cc` |
 
-### Inference and evaluation
+## Inference and evaluation
 
-#### Inference
+### Inference
 To run single-scale inference from your snapshot, use ```infer_val.py```.
 The bash script ```launch/infer_val.sh``` provides an easy way to run the inference by specifying a few variables:
 ```
@@ -158,10 +157,10 @@ SNAPSHOT=...
 # SNAPSHOT_PATH=snapshots/cityscapes/${EXP}/${RUN_ID}/${SNAPSHOT}.pth
 ```
 
-#### Evaluation
+### Evaluation
 Please use the Cityscapes' official evaluation tool ```evalPixelLevelSemanticLabeling``` from [Cityscapes scripts](https://github.com/mcordts/cityscapesScripts/tree/master/cityscapesscripts) for evaluating your results.
 
-# Citation
+## Citation
 We hope you find our work useful. If you would like to acknowledge it in your project, please use the following citation:
 ```
 @inproceedings{Araslanov:2021:DASAC,
