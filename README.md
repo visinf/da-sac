@@ -76,7 +76,7 @@ To run the training
 bash ./launch/train.sh [gta|synthia] [resnet101|vgg16|vgg16fcn] base
 ```
 where the first argument specifies the source domain, the second determines the network architecture.
-The third argument ```base`` instructs to run the training of the baseline.
+The third argument ```base``` instructs to run the training of the baseline.
 
 If you would like to skip this step, you can use our pre-trained models:
 
