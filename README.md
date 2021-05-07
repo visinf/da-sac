@@ -1,16 +1,16 @@
 # Self-supervised Augmentation Consistency <br/> for Adapting Semantic Segmentation
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
+<img alt="PyTorch" height="20" src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?&style=for-the-badge&logo=PyTorch&logoColor=white" />
 
 This repository contains the official implementation of our paper:
 
 **Self-supervised Augmentation Consistency for Adapting Semantic Segmentation**<br>
 [Nikita Araslanov](https://arnike.github.io) and [Stefan Roth](https://www.visinf.tu-darmstadt.de/visinf/team_members/sroth/sroth.en.jsp)<br>
-To appear at CVPR 2021. [arXiv preprint]
+To appear at CVPR 2021. [[arXiv preprint]](https://arxiv.org/abs/2105.00097)
 
 | <img src="assets/stuttgart.gif" alt="drawing" width="420"/><br> |
 |:--:|
-| <p align="left">We obtain state-of-the-art accuracy of adapting semantic <br> segmentation by enforcing consistency across photometric <br> and similarity transformations. We use neither style transfer <br> nor adversarial training).</p> |
+| <p align="left">We obtain state-of-the-art accuracy of adapting semantic <br> segmentation by enforcing consistency across photometric <br> and similarity transformations. We use neither style transfer <br> nor adversarial training.</p> |
 
 
 Contact: Nikita Araslanov *fname.lname* (at) visinf.tu-darmstadt.de
