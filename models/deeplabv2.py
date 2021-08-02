@@ -191,9 +191,6 @@ class DeepLabV2_ResNet101(BaseNet):
         if freeze_bn:
             print("DeepLabv2/ResNet-101: Fixing BN")
             self._freeze_bn(self)
-        else:
-            print("DeepLabv2/ResNet-101: Training BN")
-            self._freeze_bn(self)
 
         self._from_scratch(self.model.layer5)
         self.criterion = criterion
@@ -274,6 +271,7 @@ class DeepLabV2_VGG16(BaseNet):
 
         if freeze_bn:
             # freezing the backbone
+            print("DeepLabv2/VGG-16: Fixing BN")
             self._freeze_bn(self)
 
         # marking layers as new
