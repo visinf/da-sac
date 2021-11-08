@@ -6,7 +6,7 @@ This repository contains the official implementation of our paper:
 
 **Self-supervised Augmentation Consistency for Adapting Semantic Segmentation**<br>
 [Nikita Araslanov](https://arnike.github.io) and [Stefan Roth](https://www.visinf.tu-darmstadt.de/visinf/team_members/sroth/sroth.en.jsp)<br>
-To appear at CVPR 2021. [[arXiv preprint]](https://arxiv.org/abs/2105.00097)
+CVPR 2021. [[pdf](https://openaccess.thecvf.com/content/CVPR2021/papers/Araslanov_Self-Supervised_Augmentation_Consistency_for_Adapting_Semantic_Segmentation_CVPR_2021_paper.pdf)] [[supp](https://openaccess.thecvf.com/content/CVPR2021/supplemental/Araslanov_Self-Supervised_Augmentation_Consistency_CVPR_2021_supplemental.pdf)] [[arXiv](https://arxiv.org/abs/2105.00097)]
 
 | <img src="assets/stuttgart.gif" alt="drawing" width="420"/><br> |
 |:--:|
@@ -83,17 +83,17 @@ If you would like to skip this step, you can use our pre-trained models:
 **Source domain: GTA5**
 | Backbone | Arch. | IoU (val) | Link | MD5 |
 |---|---|:-:|---|---|
-| ResNet-101 | DeepLabv2 | 40.8 | [baseline_abn_e040.pth (336M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/baseline_abn_e040.pth) | `9fe17[...]c11fc` |
-| VGG-16 | DeepLabv2 | 37.1 | [baseline_abn_e115.pth (226M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/baseline_abn_e115.pth) | `d4ffc[...]ef755` |
-| VGG-16 | FCN | 36.7 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/baseline_abn_e040.pth) | `aa2e9[...]bae53` |
+| ResNet-101 | DeepLabv2 | 40.8 | [baseline_abn_e040.pth (336M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/baseline_abn_e040.pth) | `9fe17[...]c11fc` |
+| VGG-16 | DeepLabv2 | 37.1 | [baseline_abn_e115.pth (226M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/baseline_abn_e115.pth) | `d4ffc[...]ef755` |
+| VGG-16 | FCN | 36.7 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/baseline_abn_e040.pth) | `aa2e9[...]bae53` |
 
 
 **Source domain: SYNTHIA**
 | Backbone | Arch. | IoU (val) | Link | MD5 |
 |---|---|:-:|---|---|
-| ResNet-101 | DeepLabv2 | 36.3 | [baseline_abn_e090.pth (336M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/baseline_abn_e090.pth) | `b3431[...]d1a83` |
-| VGG-16 | DeepLabv2 | 34.4 | [baseline_abn_e070.pth (226M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/baseline_abn_e070.pth) | `3af24[...]5b24e` |
-| VGG-16 | FCN | 31.6 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/baseline_abn_e040.pth) | `5f457[...]e4b3a` |
+| ResNet-101 | DeepLabv2 | 36.3 | [baseline_abn_e090.pth (336M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/baseline_abn_e090.pth) | `b3431[...]d1a83` |
+| VGG-16 | DeepLabv2 | 34.4 | [baseline_abn_e070.pth (226M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/baseline_abn_e070.pth) | `3af24[...]5b24e` |
+| VGG-16 | FCN | 31.6 | [baseline_abn_e040.pth (1.1G)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/baseline_abn_e040.pth) | `5f457[...]e4b3a` |
 
 **Tip:** You can download these files (as well as the final models below) with ```tools/download_baselines.sh```:
 ```bash
@@ -110,9 +110,9 @@ To generate the weights you need to
 If you would like to skip this step, you can use our weights we computed for the ABN baselines above:
 | Backbone | Arch. | Source: GTA5 | Source: SYNTHIA |
 |---|---|---|---|
-| ResNet-101 | DeepLabv2 | [cs_weights_resnet101_gta.data](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_resnet101_gta.data) | [cs_weights_resnet101_synthia.data](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_resnet101_synthia.data) |
-| VGG-16 | DeepLabv2 | [cs_weights_vgg16_gta.data](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16_gta.data) | [cs_weights_vgg16_synthia.data](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16_synthia.data) |
-| VGG-16 | FCN | [cs_weights_vgg16fcn_gta.data](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16fcn_gta.data) | [cs_weights_vgg16fcn_synthia.data](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16fcn_synthia.data) |
+| ResNet-101 | DeepLabv2 | [cs_weights_resnet101_gta.data](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_resnet101_gta.data) | [cs_weights_resnet101_synthia.data](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_resnet101_synthia.data) |
+| VGG-16 | DeepLabv2 | [cs_weights_vgg16_gta.data](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16_gta.data) | [cs_weights_vgg16_synthia.data](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16_synthia.data) |
+| VGG-16 | FCN | [cs_weights_vgg16fcn_gta.data](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16fcn_gta.data) | [cs_weights_vgg16fcn_synthia.data](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights/cs_weights_vgg16fcn_synthia.data) |
 
 **Tip:** The bash script ```data/download_weights.sh``` will download all these importance sampling weights in the current directory.
 
@@ -128,16 +128,16 @@ We provide our final models for download.
 **Source domain: GTA5**
 | Backbone | Arch. | IoU (val) |  IoU (test) | Link | MD5 |
 |---|---|:-:|:-:|---|---|
-| ResNet-101 | DeepLabv2 | 53.8 | 55.7 | [final_e136.pth (504M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/final_e136.pth) | `59c16[...]5a32f` |
-| VGG-16 | DeepLabv2 | 49.8 | 51.0 | [final_e184.pth (339M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/final_e184.pth) | `0accb[...]d5881` |
-| VGG-16 | FCN | 49.9 | 50.4 | [final_e112.pth (1.6G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/final_e112.pth) | `e69f8[...]f729b` |
+| ResNet-101 | DeepLabv2 | 53.8 | 55.7 | [final_e136.pth (504M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_gta/final_e136.pth) | `59c16[...]5a32f` |
+| VGG-16 | DeepLabv2 | 49.8 | 51.0 | [final_e184.pth (339M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_gta/final_e184.pth) | `0accb[...]d5881` |
+| VGG-16 | FCN | 49.9 | 50.4 | [final_e112.pth (1.6G)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_gta/final_e112.pth) | `e69f8[...]f729b` |
 
 **Source domain: SYNTHIA**
 | Backbone | Arch. | IoU (val) |  IoU (test) | Link | MD5 |
 |---|---|:-:|:-:|---|---|
-| ResNet-101 | DeepLabv2 | 52.6 | 52.7 | [final_e164.pth (504M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/final_e164.pth) | `a7682[...]db742` |
-| VGG-16 | DeepLabv2 | 49.1 | 48.3 | [final_e164.pth (339M)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/final_e164.pth) | `c5b31[...]5fdb7` |
-| VGG-16 | FCN | 46.8 | 45.8 | [final_e098.pth (1.6G)](https://download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/final_e098.pth) | `efb74[...]845cc` |
+| ResNet-101 | DeepLabv2 | 52.6 | 52.7 | [final_e164.pth (504M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/resnet101_synthia/final_e164.pth) | `a7682[...]db742` |
+| VGG-16 | DeepLabv2 | 49.1 | 48.3 | [final_e164.pth (339M)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16_synthia/final_e164.pth) | `c5b31[...]5fdb7` |
+| VGG-16 | FCN | 46.8 | 45.8 | [final_e098.pth (1.6G)](https://download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines/vgg16fcn_synthia/final_e098.pth) | `efb74[...]845cc` |
 
 ## Inference and evaluation
 
@@ -164,9 +164,11 @@ Please use the Cityscapes' official evaluation tool ```evalPixelLevelSemanticLab
 We hope you find our work useful. If you would like to acknowledge it in your project, please use the following citation:
 ```
 @inproceedings{Araslanov:2021:DASAC,
-  title     = {Self-supervised Augmentation Consistency for Adapting Semantic Segmentation},
-  author    = {Araslanov, Nikita and and Roth, Stefan},
-  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year = {2021}
+    author    = {Araslanov, Nikita and Roth, Stefan},
+    title     = {Self-Supervised Augmentation Consistency for Adapting Semantic Segmentation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {15384-15394}
 }
 ```
