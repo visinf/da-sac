@@ -12,7 +12,7 @@ Tip: Move this file to snapshots/cityscapes/baselines and execute
 
 echo "Downloading baseline models"
 
-ROOT_URL=download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines
+ROOT_URL=download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/snapshots/baselines
 
 download_model () {
   echo $1 $ROOT_URL
