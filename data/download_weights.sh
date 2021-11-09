@@ -2,7 +2,7 @@
 
 echo "Downloading importance sampling weights"
 
-ROOT_URL=download.visinf.informatik.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights
+ROOT_URL=download.visinf.tu-darmstadt.de/data/2021-cvpr-araslanov-da-sac/cs_weights
 
 download_model () {
   echo $1 $ROOT_URL
